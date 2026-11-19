@@ -6,6 +6,33 @@
 
 ---
 
+## Thông tin bài nộp
+
+- Họ và tên: Nguyễn Minh Đạt
+- MSSV: `2A202603582`
+- Lớp: `L3A`
+- Bài lab: Day 11 — Controlled Agent Security
+
+## Cách chạy nhanh
+
+Chạy các lệnh sau từ thư mục gốc repo trên PowerShell.
+Điền API key vào `.env` theo mẫu `.env.example` trước khi chạy Blue.
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pytest tests/smoke -q
+.\.venv\Scripts\python.exe src/main.py --part 2
+.\.venv\Scripts\python.exe src/main.py --part 3
+.\.venv\Scripts\python.exe -m pytest tests/public -q
+.\.venv\Scripts\python.exe scripts/grade.py --submission-dir . --out outputs/grade_report.json
+```
+
+Xem hướng dẫn CP4 trong [CHECKPOINTS.md](CHECKPOINTS.md).
+Kết quả CP4 trong `outputs/attack_results.json` được tạo bằng
+`gemini-3.5-flash-lite` cho cả Red và Red Advance.
+
+
+
 ## Thời lượng
 
 | Phần | Thời gian |
